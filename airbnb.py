@@ -165,17 +165,7 @@ if SELECT == "Explore Data":
     csv = df.to_csv(index=False).encode('utf-8')
     st.download_button('Download Data', data=csv, file_name="Data.csv", mime="text/csv")
 
-#******************************************
-    # import plotly.figure_factory as ff
-    #
-    # st.subheader(":point_right: Neighbourhood_group wise with Room_type")
-    # with st.expander("Summary_Table"):
-    #     df_sample = df[0:20][
-    #         ["neighbourhood_group", "neighbourhood", "reviews_per_month", "room_type", "price",
-    #          "host_name"]]
-    #     fig = ff.create_table(df_sample, colorscale="Cividis")
-    #     st.plotly_chart(fig, use_container_width=True)
-#***************************************************
+
     import plotly.figure_factory as ff
 
     st.subheader(":point_right: Average Rating & Price by Room Type & Neighbourhood")
